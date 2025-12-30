@@ -1,4 +1,4 @@
-#!/bin/bash
+#!/bin/sh
 
 CGROUP_FS="/sys/fs/cgroup"
 if [ ! -e "$CGROUP_FS" ]; then

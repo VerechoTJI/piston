@@ -227,8 +227,9 @@ class Job {
                 event_bus.emit('stdout', data);
             } else if (
                 stdout.length + data.length >
-                this.runtime.output_max_size
+                10240
             ) {
+                console.log(stdout.length)
                 message = 'stdout length exceeded';
                 status = 'OL';
                 this.logger.info(message);
